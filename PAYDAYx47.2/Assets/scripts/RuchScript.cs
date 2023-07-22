@@ -7,9 +7,9 @@ using UnityEngine;
 public class RuchScript : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public Transform tf;
     public float speed;
     Vector2 ruch;
+    public Vector2 position;
 
 
     void Start()
@@ -26,6 +26,8 @@ public class RuchScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        position = transform.position;
+
         ruch.x = Input.GetAxisRaw("Horizontal");
         ruch.y = Input.GetAxisRaw("Vertical");
 
